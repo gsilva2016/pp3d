@@ -70,7 +70,7 @@ RUN cd /rs/librealsense && mkdir build && \
     export PYTHONPATH="$PYTHONPATH":/usr/lib/python3/dist-packages/pyrealsense2 && \
     python3 -c "import pyrealsense2 as rs; print(rs)"
 
-
+COPY src/realsense_pcd_openvino_pointpillar.py /o3d/Open3D/examples/python/reconstruction_system/sensors/
 
 SHELL ["/bin/bash", "-c"] 
-
+WORKDIR /o3d/Open3D/examples/python/reconstruction_system/sensors/
